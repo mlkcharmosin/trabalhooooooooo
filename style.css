@@ -1,0 +1,514 @@
+/* =========================================
+   VOGUE AURA
+   Moda & Estilo
+   ========================================= */
+
+/* ---------- RESET ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #f7f4ef;
+    color: #1b1b1b;
+    line-height: 1.6;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ---------- VARIÁVEIS ---------- */
+
+:root {
+    --preto: #151515;
+    --cinza: #686868;
+    --bege: #f7f4ef;
+    --bege-escuro: #e9e1d5;
+    --branco: #ffffff;
+    --dourado: #a4875c;
+    --serif: Georgia, "Times New Roman", serif;
+    --sans: Arial, Helvetica, sans-serif;
+}
+
+/* ---------- CABEÇALHO ---------- */
+
+.cabecalho {
+    background: var(--bege);
+    border-bottom: 1px solid #ded8cf;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navegacao {
+    width: min(1200px, 90%);
+    min-height: 82px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: var(--serif);
+    font-size: 1.35rem;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.logo span {
+    color: var(--dourado);
+    font-weight: normal;
+}
+
+.menu {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+    font-family: var(--sans);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.menu a {
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: var(--dourado);
+}
+
+/* ---------- HERO ---------- */
+
+.hero {
+    width: min(1200px, 90%);
+    min-height: 700px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 70px;
+    padding: 80px 0;
+}
+
+.hero-conteudo {
+    max-width: 520px;
+}
+
+.subtitulo {
+    color: var(--dourado);
+    font-family: var(--sans);
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-size: clamp(4rem, 7vw, 7rem);
+    line-height: 0.9;
+    font-weight: normal;
+    letter-spacing: -5px;
+    margin-bottom: 35px;
+}
+
+.hero h1 span {
+    display: block;
+    color: var(--dourado);
+    font-style: italic;
+}
+
+.descricao {
+    max-width: 430px;
+    color: var(--cinza);
+    font-family: var(--sans);
+    font-size: 0.95rem;
+    line-height: 1.9;
+    margin-bottom: 35px;
+}
+
+.botao {
+    display: inline-block;
+    padding: 16px 28px;
+    background: var(--preto);
+    color: var(--branco);
+    font-family: var(--sans);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+}
+
+.botao:hover {
+    background: var(--dourado);
+    transform: translateY(-2px);
+}
+
+.hero-imagem {
+    height: 620px;
+    overflow: hidden;
+}
+
+.hero-imagem img {
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+
+.hero-imagem:hover img {
+    transform: scale(1.03);
+}
+
+/* ---------- TENDÊNCIAS ---------- */
+
+.tendencias {
+    background: var(--preto);
+    color: var(--branco);
+    padding: 120px 5%;
+}
+
+.secao-titulo {
+    width: min(800px, 100%);
+    margin: 0 auto 70px;
+    text-align: center;
+}
+
+.secao-titulo h2 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: normal;
+    line-height: 1;
+    margin-bottom: 25px;
+}
+
+.secao-titulo > p:last-child {
+    color: #aaa;
+    font-family: var(--sans);
+    font-size: 0.9rem;
+}
+
+.cards {
+    width: min(1200px, 100%);
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: #3b3b3b;
+}
+
+.card {
+    min-height: 330px;
+    padding: 45px;
+    background: var(--preto);
+    transition: background 0.3s ease;
+}
+
+.card:hover,
+.card.destaque {
+    background: #222222;
+}
+
+.numero {
+    color: var(--dourado);
+    font-family: var(--sans);
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    margin-bottom: 65px;
+}
+
+.card h3 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin-bottom: 18px;
+}
+
+.card p {
+    color: #999;
+    font-family: var(--sans);
+    font-size: 0.85rem;
+    line-height: 1.8;
+}
+
+/* ---------- ESTILO ---------- */
+
+.estilo {
+    width: min(1200px, 90%);
+    margin: auto;
+    padding: 130px 0;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: center;
+}
+
+.estilo-imagem {
+    height: 650px;
+    overflow: hidden;
+}
+
+.estilo-imagem img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.estilo-conteudo h2 {
+    max-width: 600px;
+    font-size: clamp(2.7rem, 5vw, 4.5rem);
+    line-height: 1;
+    font-weight: normal;
+    margin-bottom: 35px;
+}
+
+.estilo-conteudo > p:not(.subtitulo) {
+    max-width: 500px;
+    color: var(--cinza);
+    font-family: var(--sans);
+    font-size: 0.9rem;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+.link {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--dourado);
+    font-family: var(--sans);
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* ---------- CITAÇÃO ---------- */
+
+.citacao {
+    min-height: 480px;
+    padding: 100px 5%;
+    background:
+        linear-gradient(
+            rgba(20, 20, 20, 0.78),
+            rgba(20, 20, 20, 0.78)
+        ),
+        url("https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=1800&q=85")
+        center / cover;
+
+    color: var(--branco);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.citacao > div {
+    max-width: 850px;
+}
+
+.aspas {
+    color: var(--dourado);
+    font-size: 6rem;
+    line-height: 0.5;
+}
+
+blockquote {
+    font-size: clamp(2.3rem, 5vw, 4.5rem);
+    font-style: italic;
+    line-height: 1.1;
+    margin: 35px 0;
+}
+
+.citacao p {
+    color: #aaa;
+    font-family: var(--sans);
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* ---------- SOBRE ---------- */
+
+.sobre {
+    width: min(850px, 90%);
+    margin: auto;
+    padding: 130px 0;
+    text-align: center;
+}
+
+.sobre h2 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+.sobre > p:last-child {
+    color: var(--cinza);
+    font-family: var(--sans);
+    font-size: 0.9rem;
+    line-height: 2;
+}
+
+/* ---------- RODAPÉ ---------- */
+
+.rodape {
+    background: var(--preto);
+    color: var(--branco);
+    padding: 70px 5%;
+}
+
+.rodape-conteudo {
+    width: min(1200px, 100%);
+    margin: auto;
+    text-align: center;
+}
+
+.rodape .logo {
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.rodape p {
+    color: #888;
+    font-family: var(--sans);
+    font-size: 0.8rem;
+}
+
+.linha {
+    width: 100%;
+    height: 1px;
+    background: #333;
+    margin: 45px 0 25px;
+}
+
+.rodape small {
+    color: #666;
+    font-family: var(--sans);
+    font-size: 0.7rem;
+}
+
+/* ---------- RESPONSIVIDADE ---------- */
+
+@media (max-width: 850px) {
+
+    .navegacao {
+        min-height: 70px;
+    }
+
+    .menu {
+        gap: 15px;
+        font-size: 0.6rem;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        padding: 70px 0;
+    }
+
+    .hero-conteudo {
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: clamp(4rem, 15vw, 6rem);
+    }
+
+    .hero-imagem {
+        height: 500px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        min-height: auto;
+    }
+
+    .estilo {
+        grid-template-columns: 1fr;
+        gap: 60px;
+        padding: 90px 0;
+    }
+
+    .estilo-imagem {
+        height: 500px;
+    }
+
+    .estilo-conteudo {
+        order: -1;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .navegacao {
+        flex-direction: column;
+        justify-content: center;
+        gap: 12px;
+        padding: 18px 0;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        width: 88%;
+        padding: 60px 0;
+    }
+
+    .hero h1 {
+        letter-spacing: -3px;
+    }
+
+    .hero-imagem,
+    .estilo-imagem {
+        height: 430px;
+    }
+
+    .tendencias {
+        padding: 85px 6%;
+    }
+
+    .card {
+        padding: 35px;
+    }
+
+    .numero {
+        margin-bottom: 35px;
+    }
+
+    .citacao {
+        min-height: 400px;
+        padding: 80px 8%;
+    }
+
+    blockquote {
+        font-size: 2.5rem;
+    }
+
+    .sobre {
+        padding: 90px 0;
+    }
+}
